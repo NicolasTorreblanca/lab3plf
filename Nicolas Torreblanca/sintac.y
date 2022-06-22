@@ -35,10 +35,18 @@ void yyerror(char * s)
     exit(1);
 }
 
-void main()
+void main(int argc,char *argv[])
 {
-    printf("Ingrese texto a analizar:");
-    int x = yyparse();
-    printf("An%clisis Sint%cctico correcto \n",160,160);
+    if(argc == 1){
+        printf("Ingrese texto a analizar:");
+        int x = yyparse();
+        printf("An%clisis Sint%cctico correcto \n",160,160);
+    }
+    else{
+        printf("Ingreso de par%cmetros en l%cnea de comandos \n",160,161);
+        printf("Uso: sintac.exe");
+        exit(1);
+    }
+    
 }
 
